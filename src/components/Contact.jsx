@@ -3,7 +3,7 @@ import { Mail, Camera, Phone, MapPin } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-28 px-6 md:px-16 max-w-7xl mx-auto">
+    <section id="contact" className="py-24 px-8 md:px-16 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

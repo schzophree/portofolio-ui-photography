@@ -7,19 +7,19 @@ import { X, ZoomIn } from 'lucide-react'
   tag: kategori foto (Portrait, Event, Street, Product, dll.)
 */
 const photos = [
-  { src: '/assets/gallery-1.jpg', tag: 'Portrait', span: 'md:row-span-2' },
-  { src: '/assets/gallery-2.jpg', tag: 'Event',    span: '' },
-  { src: '/assets/gallery-3.jpg', tag: 'Street',   span: '' },
-  { src: '/assets/gallery-4.jpg', tag: 'Product',  span: 'md:col-span-2' },
-  { src: '/assets/gallery-5.jpg', tag: 'Portrait', span: '' },
-  { src: '/assets/gallery-6.jpg', tag: 'Event',    span: '' },
+  { src: '/assets/gallery-1.jpg', tag: 'Street', span: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/gallery-2.png', tag: 'Event FSS', span: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/gallery-3.jpg', tag: 'Street', span: 'md:col-span-2 md:row-span-2' },
+  { src: '/assets/gallery-4.jpg', tag: 'Event Band', span: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/gallery-5.png', tag: 'Wedding', span: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/gallery-6.png', tag: 'Event Pawai Obor', span: 'md:col-span-2 md:row-span-2' },
 ]
 
 export default function Gallery() {
   const [active, setActive] = useState(null)
 
   return (
-    <section id="gallery" className="py-28 px-6 md:px-16">
+    <section id="gallery" className="py-24 px-8 md:px-16 max-w-7xl mx-auto">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -29,13 +29,13 @@ export default function Gallery() {
       >
         <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4">✦ Karya Saya</p>
         <h2 className="font-cormorant font-light text-5xl md:text-7xl text-light leading-none">
-          Selected<br />
+          kass<br />
           <span className="italic text-accent">Works.</span>
         </h2>
       </motion.div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-3 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[300px] md:auto-rows-[280px] mx-auto w-full">
         {photos.map((photo, i) => (
           <motion.div
             key={i}
@@ -69,6 +69,7 @@ export default function Gallery() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[9998] bg-dark/95 backdrop-blur-xl flex items-center justify-center p-6"
+          style={{ marginLeft: '23px', marginRight: '23px' }}
           onClick={() => setActive(null)}
         >
           <button

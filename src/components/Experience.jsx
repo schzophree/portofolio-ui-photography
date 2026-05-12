@@ -12,49 +12,52 @@ const experiences = [
     org:      'Cinegraph.id',
     role:     'Fotografer & Videografer',
     badge:    'Owner',
-    period:   'Juni 2025 — Sekarang',
+    period:   'Juni 2025 - Sekarang',
     active:   true,
     desc: [
-      'Mendirikan dan mengelola studio fotografi & videografi independen.',
-      'Menangani berbagai project: portrait, event, dokumentasi, dan konten kreatif.',
-      'Menghadirkan visual storytelling berkualitas tinggi untuk klien personal maupun korporat.',
     ],
   },
   {
     org:      'Neoteric Department',
     role:     'Graphic Designer & Photographer',
     badge:    null,
-    period:   'November 2023 — Sekarang',
+    period:   'November 2023 - Sekarang',
     active:   true,
     desc: [],   // Kosong = hanya tampilkan nama, jabatan, periode
+  },
+  {
+    org:      'CV. Setengah Sodare',
+    role:     'Desainer Grafis (Kontrak)',
+    badge:    'Pontianak, Indonesia (WFH)',
+    period:   'Mei 2023 - Juni 2023',
+    active:   false,
+    desc: [
+    ],
   },
   {
     org:      'Percetakkan Media Grafika',
     role:     'Desainer Grafis',
     badge:    'Singkawang, Indonesia',
-    period:   'Januari 2022 — Desember 2022',
+    period:   'Januari 2022 - Desember 2022',
     active:   false,
     desc: [
-      'Merancang materi cetak profesional: spanduk, stiker, papan iklan, dan cetak ID card.',
-      'Bekerja dengan klien bisnis lokal untuk kebutuhan branding dan promosi visual.',
-      'Mengoperasikan software desain grafis: Photoshop, Illustrator, CorelDraw.',
     ],
   },
 ]
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-28 px-6 md:px-16 max-w-5xl mx-auto">
+    <section id="experience" className="py-24 px-8 md:px-16 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mb-16"
       >
-        <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4">✦ Pengalaman & Komunitas</p>
+        <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4" style={{ minHeight: '20px', paddingTop: '14px' }}>// Pengalaman &amp; Komunitas</p>
         <h2 className="font-cormorant font-light text-5xl md:text-7xl text-light leading-none">
-          Journey<br />
-          <span className="italic text-accent">&amp; Growth.</span>
+          Pengalaman Kerja<br />
+          <span className="italic text-accent">&amp; Komunitas.</span>
         </h2>
       </motion.div>
 

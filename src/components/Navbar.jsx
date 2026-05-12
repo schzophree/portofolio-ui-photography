@@ -20,19 +20,17 @@ export default function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-16 py-5 flex items-center justify-between transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 px-8 md:px-16 py-5 flex items-center justify-between transition-all duration-500 ${
           scrolled
             ? 'bg-dark/80 backdrop-blur-xl border-b border-white/5'
             : 'bg-transparent'
         }`}
+        style={{ marginLeft: '0px', marginRight: '0px', paddingLeft: '23px', paddingRight: '23px', marginBottom: '8px', flexGrow: 1, minHeight: '41px' }}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 border border-accent/60 rounded-full flex items-center justify-center">
-            <Aperture size={14} className="text-accent" />
-          </div>
-          <span className="font-cormorant text-xl font-semibold tracking-widest text-light uppercase">
-            MDH
+        <div className="flex items-center">
+          <span className="mono font-medium text-accent uppercase tracking-tighter" style={{ fontSize: '14px' }}>
+            //PORTOFOLIO-INFO
           </span>
         </div>
 
@@ -42,14 +40,16 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="mono text-[10px] tracking-[0.2em] text-light/40 hover:text-accent transition-all duration-300 uppercase font-light"
+              className="mono tracking-[0.2em] text-light/40 hover:text-accent transition-all duration-300 uppercase font-light"
+              style={{ fontSize: '14px' }}
             >
               {link}
             </a>
           ))}
           <a
             href="#contact"
-            className="border border-accent/30 text-accent mono text-[10px] px-8 py-2 tracking-[0.2em] uppercase hover:bg-accent hover:text-dark transition-all duration-500 font-medium"
+            className="border border-accent/30 text-accent mono px-8 py-2 tracking-[0.2em] uppercase hover:bg-accent hover:text-dark transition-all duration-500 font-medium"
+            style={{ fontSize: '14px' }}
           >
             Hire Me
           </a>

@@ -3,22 +3,22 @@ import { Camera, Film, PenTool, Monitor, FileSpreadsheet } from 'lucide-react'
 
 const skills = [
   { icon: <Camera size={20} />,        label: 'Photography',        level: 90 },
-  { icon: <Film size={20} />,          label: 'Video Editing',      level: 82 },
-  { icon: <PenTool size={20} />,       label: 'Graphic Design',     level: 88 },
-  { icon: <Monitor size={20} />,       label: 'UI Design',          level: 72 },
-  { icon: <FileSpreadsheet size={20} />, label: 'Microsoft Office', level: 80 },
+  { icon: <Film size={20} />,          label: 'Video Editing',      level: 75 },
+  { icon: <PenTool size={20} />,       label: 'Graphic Design',     level: 90 },
+  { icon: <Monitor size={20} />,       label: 'UI Design',          level: 40 },
+  { icon: <FileSpreadsheet size={20} />, label: 'Microsoft Office', level: 89 },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 px-6 md:px-16 max-w-7xl mx-auto">
+    <section id="skills" className="py-24 px-8 md:px-16 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mb-16"
       >
-        <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4">✦ Keahlian</p>
+        <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4">//KEAHLIAN</p>
         <h2 className="font-cormorant font-light text-5xl md:text-7xl text-light leading-none">
           Hard<br />
           <span className="italic text-accent">Skills.</span>

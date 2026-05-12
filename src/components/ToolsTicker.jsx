@@ -1,68 +1,73 @@
 import { motion } from 'framer-motion'
 
 const tools = [
-  { name: 'Adobe Lightroom',   icon: 'https://cdn.simpleicons.org/adobelightroom/c9a96e' },
-  { name: 'Adobe Photoshop',   icon: 'https://cdn.simpleicons.org/adobephotoshop/c9a96e' },
-  { name: 'Adobe Illustrator', icon: 'https://cdn.simpleicons.org/adobeillustrator/c9a96e' },
-  { name: 'Adobe Premiere Pro',icon: 'https://cdn.simpleicons.org/adobepremierepro/c9a96e' },
+  { name: 'Adobe Lightroom',   icon: '/assets/icons/lightroom.png' },
+  { name: 'Adobe Photoshop',   icon: '/assets/icons/photoshop.png' },
+  { name: 'Adobe Illustrator', icon: '/assets/icons/illustrator.png' },
+  { name: 'Adobe Premiere Pro',icon: '/assets/icons/premiere-pro.png' },
   { name: 'Figma',             icon: 'https://cdn.simpleicons.org/figma/c9a96e' },
   { name: 'CorelDraw',         icon: 'https://cdn.simpleicons.org/coreldraw/c9a96e' },
-  { name: 'Canva',             icon: 'https://cdn.simpleicons.org/canva/c9a96e' },
-  { name: 'FL Studio',         icon: 'https://cdn.simpleicons.org/flstudio/c9a96e' },
-  { name: 'Microsoft Office',  icon: 'https://cdn.simpleicons.org/microsoft/c9a96e' }, // Simplified slug
-  { name: 'CapCut',            icon: 'https://cdn.simpleicons.org/capcut/c9a96e' },
+  { name: 'Canva',             icon: '/assets/icons/canva.png' },
+  { name: 'FL Studio',         icon: '/assets/icons/flstudio.png' },
+  { name: 'Microsoft Office',  icon: '/assets/icons/office.png' },
+  { name: 'CapCut',            icon: '/assets/icons/capcut.png' },
 ]
 
-/* 
-   To ensure a truly seamless loop:
-   1. Use only TWO copies for the loop (original + clone).
-   2. Ensure container gap is consistent and included in width calculations.
-   3. Framer Motion is more reliable for pixel-perfect seamless looping than CSS keyframes in some browsers.
-*/
+// Two copies for the seamless -50% trick
 const doubled = [...tools, ...tools]
 
 export default function ToolsTicker() {
   return (
-    <section className="py-20 border-y border-white/5 overflow-hidden bg-dark/50 backdrop-blur-sm relative">
-      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-dark to-transparent z-20" />
-      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-dark to-transparent z-20" />
+    <section className="relative bg-dark/50 backdrop-blur-sm overflow-hidden flex flex-col">
+      {/* Top Border - Clean Gray */}
+      <div className="w-full border-t border-white/10" />
       
-      <div className="mb-12 px-6 md:px-16 text-center">
-        <p className="mono text-[10px] text-accent/40 tracking-[0.5em] uppercase">✦ Essential Creative Stack</p>
+      <div className="pt-28 pb-36 relative">
+        {/* Side Gradients for fading edges */}
+        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-dark to-transparent z-20 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-dark to-transparent z-20 pointer-events-none" />
+        
+        <div className="mb-20 px-6 md:px-16 text-center">
+          <p className="mono text-[10px] text-accent/50 tracking-[0.6em] uppercase font-medium">✦ Essential Creative Stack</p>
+        </div>
+
+        <div className="flex relative overflow-hidden">
+          <motion.div
+            className="flex items-center gap-0"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              ease: "linear",
+              duration: 40,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          >
+            {doubled.map((tool, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 shrink-0 pr-48 md:pr-80 group grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-default"
+                style={{ marginLeft: '50px', marginRight: '50px', alignSelf: 'stretch', justifyContent: 'flex-start' }}
+              >
+                <img 
+                  src={tool.icon} 
+                  alt={tool.name} 
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  onError={(e) => { 
+                    e.target.src = 'https://cdn.simpleicons.org/adobe/c9a96e';
+                  }}
+                />
+                <span className="mono text-[11px] md:text-[13px] text-light font-light tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap uppercase">
+                  {tool.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
 
-      <div className="flex relative overflow-hidden">
-        <motion.div 
-          className="flex items-center gap-16 md:gap-24 px-8 md:px-12"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            ease: "linear",
-            duration: 35,
-            repeat: Infinity,
-          }}
-        >
-          {doubled.map((tool, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-4 shrink-0 group grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-            >
-              <img 
-                src={tool.icon} 
-                alt={tool.name} 
-                className="w-8 h-8 md:w-9 md:h-9 object-contain"
-                loading="lazy"
-                onError={(e) => { 
-                  // Fallback for icons that might fail
-                  e.target.src = 'https://cdn.simpleicons.org/adobe/c9a96e';
-                }}
-              />
-              <span className="mono text-[11px] text-light font-light tracking-widest whitespace-nowrap uppercase">
-                {tool.name}
-              </span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+      {/* Bottom Border - Clean Gray */}
+      <div className="w-full border-b border-white/10" />
     </section>
   )
 }
