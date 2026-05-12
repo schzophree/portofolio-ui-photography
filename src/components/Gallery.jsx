@@ -11,7 +11,7 @@ const photos = [
   { src: '/assets/gallery-2.png', tag: 'Event FSS', span: 'md:col-span-1 md:row-span-2' },
   { src: '/assets/gallery-3.jpg', tag: 'Street', span: 'md:col-span-2 md:row-span-2' },
   { src: '/assets/gallery-4.jpg', tag: 'Event Band', span: 'md:col-span-1 md:row-span-2' },
-  { src: '/assets/gallery-5.png', tag: 'Wedding', span: 'md:col-span-1 md:row-span-2' },
+  { src: '/assets/gallery-5.jpeg', tag: 'Wedding', span: 'md:col-span-1 md:row-span-2' },
   { src: '/assets/gallery-6.png', tag: 'Event Pawai Obor', span: 'md:col-span-2 md:row-span-2' },
 ]
 
