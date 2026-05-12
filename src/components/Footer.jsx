@@ -3,18 +3,12 @@ export default function Footer() {
     <footer className="py-20 px-8 md:px-16 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-          
+
           <div className="space-y-6">
-            <h4 className="font-cormorant text-4xl text-light italic">Moch Danu Hidayat</h4>
-            <div className="flex gap-8">
-              <a href="https://instagram.com/moonchi.xd" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">Instagram</a>
-              <a href="https://behance.net" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">Behance</a>
-              <a href="#" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">LinkedIn</a>
-            </div>
           </div>
 
           <div className="text-left md:text-right space-y-4">
-            <p className="font-mono text-[10px] text-accent/40 tracking-[0.3em] uppercase">Photographer & Visual Creator</p>
+            <p className="font-mono text-[10px] text-accent/40 tracking-[0.3em] uppercase">Photographer & media Creator</p>
             <p className="font-mono text-[10px] text-light/10">
               © 2026 · ALL RIGHTS RESERVED
             </p>
@@ -29,4 +23,3 @@ export default function Footer() {
     </footer>
   )
 }
-

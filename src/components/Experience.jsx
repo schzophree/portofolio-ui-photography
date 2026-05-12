@@ -84,7 +84,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2" style={{ paddingBottom: '20px' }}>
                 <p className="font-dm text-light/60 text-base">{exp.role}</p>
                 {exp.badge && (
                   <span className="font-dm text-xs text-light/30 italic">

@@ -3,11 +3,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #c9a96e;
-  --color-dark: #080808;
-  --color-card: #111111;
-  --color-mid: #1c1c1c;
-  --color-light: #f0ede8;
+  --color-accent: #ffffff;
+  --color-dark: #000000;
+  --color-card: #0a0a0a;
+  --color-mid: #111111;
+  --color-light: #ffffff;
   
   --font-cormorant: "Cormorant Garamond", serif;
   --font-dm: "DM Sans", sans-serif;
@@ -15,11 +15,11 @@
 }
 
 :root {
-  --accent: #c9a96e;
-  --dark: #080808;
-  --card: #111111;
-  --mid: #1c1c1c;
-  --light: #f0ede8;
+  --accent: #ffffff;
+  --dark: #000000;
+  --card: #0a0a0a;
+  --mid: #111111;
+  --light: #ffffff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
 }
 
-.mono {
+.font-mono {
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: -0.02em;
 }
@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #333333; border-radius: 4px; }
 
 /* Grain texture overlay */
 body::before {
@@ -66,7 +66,7 @@ body::before {
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  opacity: 0.04;
   pointer-events: none;
   z-index: 9999;
 }

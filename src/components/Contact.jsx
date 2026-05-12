@@ -14,9 +14,9 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <p className="section-label">Connect</p>
-            <h2 className="editorial-title mb-12">
+            <h2 className="editorial-title mb-12" style={{ paddingBottom: '24px' }}>
               Let's create<br />
-              <span className="italic text-accent">something legendary.</span>
+              <span className="italic text-accent" style={{ paddingBottom: '0px' }}>something legendary.</span>
             </h2>
             
             <p className="text-light/40 font-dm text-xl leading-relaxed max-w-xl mb-16">
@@ -28,9 +28,9 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 gap-12">
               {[
                 { label: 'EMAIL', value: 'moch.danuhdyt@gmail.com', href: 'mailto:moch.danuhdyt@gmail.com' },
-                { label: 'WHATSAPP', value: '+62 8-5175-363668', href: 'https://wa.me/6285175363668' },
+                { label: 'WHATSAPP', value: '+628-5175-363668', href: 'https://wa.me/6285175363668' },
                 { label: 'instagram', value: '@moonchi.xd', href: 'https://instagram.com/moonchi.xd' },
-                { label: 'Adress', value: 'Pontianak, Indonesia', href: null },
+                { label: 'Adress', value: 'Pontianak, Kalimantan Barat, Indonesia', href: null },
               ].map((item, i) => (
                 <motion.div
                   key={i}

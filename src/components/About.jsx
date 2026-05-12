@@ -18,7 +18,7 @@ export default function About() {
             className="relative z-10 w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700"
             style={{ marginTop: '1px' }}
           />
-          <div className="absolute bottom-4 right-4 z-20 bg-dark/80 backdrop-blur-sm border px-4 py-3" style={{ borderColor: 'rgb(201, 169, 110)' }}>
+          <div className="absolute bottom-4 right-4 z-20 bg-dark/80 backdrop-blur-sm border px-4 py-3" style={{ borderColor: 'rgba(2, 2, 2, 1)' }}>
             <p className="font-mono text-xs tracking-widest" style={{ color: 'rgba(219, 219, 219, 1)' }}>Owner - Cinegraph.id</p>
             <p className="font-cormorant text-lg text-light italic mt-0.5">Photographer & Videographer</p>
           </div>
