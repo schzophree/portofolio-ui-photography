@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background — ganti src dengan foto terbaik kamu */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/sampul.jpg"
+          src="/assets/sampul.jpeg"
           alt="hero"
           className="w-full h-full object-cover object-center"
         />
@@ -23,8 +23,8 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="absolute top-20 right-6 md:top-24 md:right-16 text-right z-10"
       >
-        <p className="mono text-[10px] md:text-xs text-light/20 tracking-[0.2em] uppercase font-light drop-shadow-lg">Pontianak, West Kalimantan</p>
-        <p className="mono text-[10px] md:text-xs text-accent/40 tracking-[0.2em] uppercase mt-1.5 font-light drop-shadow-lg">EST - 2026</p>
+        <p className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase font-light drop-shadow-lg" style={{ color: 'rgba(166, 166, 166, 1)' }}>Pontianak, West Kalimantan</p>
+        <p className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mt-1.5 font-light drop-shadow-lg" style={{ color: 'rgba(166, 166, 166, 1)' }}>EST - 2026</p>
       </motion.div>
 
       {/* Main content */}
@@ -33,8 +33,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mono text-[10px] md:text-sm text-accent tracking-[0.4em] md:tracking-[0.6em] uppercase mb-6 md:mb-10 font-light drop-shadow-lg"
-          style={{ marginLeft: '23px', marginRight: '23px' }}
+          className="font-mono text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.6em] uppercase mb-6 md:mb-10 font-light drop-shadow-lg"
+          style={{ marginLeft: '23px', marginRight: '23px', color: 'rgba(166, 166, 166, 1)' }}
         >
           // Photographer & Media Creative
         </motion.p>
@@ -54,8 +54,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-light/40 text-xs md:text-base max-w-[280px] md:max-w-sm leading-relaxed mb-10 md:mb-12 font-light bg-dark/40 backdrop-blur-sm px-5 py-3 rounded-full border border-white/5 inline-block drop-shadow-lg"
-          style={{ marginLeft: '23px', marginRight: '23px' }}
+          className="text-xs md:text-base max-w-[280px] md:max-w-sm leading-relaxed mb-10 md:mb-12 font-light bg-dark/40 backdrop-blur-sm px-5 py-3 rounded-full border border-white/5 inline-block drop-shadow-lg"
+          style={{ marginLeft: '23px', marginRight: '23px', color: 'rgba(233, 233, 233, 1)' }}
         >
           Capturing Moment and Cinema Partner.
         </motion.p>
@@ -72,8 +72,8 @@ export default function Hero() {
         <motion.p
           animate={{ x: [-4, 4, -4] }}
           transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-          className="mono text-[10px] md:text-xs text-light/20 tracking-widest uppercase rotate-90 origin-center whitespace-nowrap drop-shadow-lg"
-          style={{ marginLeft: 'auto', minHeight: '66px' }}
+          className="font-mono text-[10px] md:text-xs tracking-widest uppercase rotate-90 origin-center whitespace-nowrap drop-shadow-lg"
+          style={{ marginLeft: 'auto', minHeight: '66px', color: 'rgba(166, 166, 166, 1)', transform: 'translateX(2.45989px) rotateZ(90deg)' }}
         >
           Scroll &gt;&gt;
         </motion.p>

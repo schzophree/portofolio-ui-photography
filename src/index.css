@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import "./styles/components.css";
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #c9a96e;
+  --color-dark: #080808;
+  --color-card: #111111;
+  --color-mid: #1c1c1c;
+  --color-light: #f0ede8;
+  
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-dm: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
 :root {
-  /* Brand Hue (based on #c9a96e) ≈ 85 deg */
-  --accent: oklch(75% 0.12 85);       
-  --dark:   oklch(12% 0.01 85);      /* Tinted deep charcoal */
-  --card:   oklch(15% 0.01 85);
-  --mid:    oklch(20% 0.01 85);
-  --light:  oklch(95% 0.02 85);      /* Warm champagne off-white */
-  --muted:  oklch(95% 0.02 85 / 0.45);
+  --accent: #c9a96e;
+  --dark: #080808;
+  --card: #111111;
+  --mid: #1c1c1c;
+  --light: #f0ede8;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }

@@ -29,7 +29,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center">
-          <span className="mono font-medium text-accent uppercase tracking-tighter" style={{ fontSize: '14px' }}>
+          <span className="font-mono font-medium text-accent uppercase tracking-tighter" style={{ fontSize: '14px' }}>
             //PORTOFOLIO-INFO
           </span>
         </div>
@@ -40,7 +40,7 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="mono tracking-[0.2em] text-light/40 hover:text-accent transition-all duration-300 uppercase font-light"
+              className="font-mono tracking-[0.2em] text-light/40 hover:text-accent transition-all duration-300 uppercase font-light"
               style={{ fontSize: '14px' }}
             >
               {link}

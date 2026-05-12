@@ -1,17 +1,32 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12 px-8 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <span className="mono text-xs text-light tracking-widest" style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: '12px' }}>Moch Danu Hidayat</span>
+    <footer className="py-20 px-8 md:px-16 border-t border-white/5">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+          
+          <div className="space-y-6">
+            <h4 className="font-cormorant text-4xl text-light italic">Moch Danu Hidayat</h4>
+            <div className="flex gap-8">
+              <a href="https://instagram.com/moonchi.xd" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">Instagram</a>
+              <a href="https://behance.net" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">Behance</a>
+              <a href="#" className="font-mono text-[10px] text-light/20 hover:text-accent tracking-widest uppercase transition-colors">LinkedIn</a>
+            </div>
+          </div>
+
+          <div className="text-left md:text-right space-y-4">
+            <p className="font-mono text-[10px] text-accent/40 tracking-[0.3em] uppercase">Photographer & Visual Creator</p>
+            <p className="font-mono text-[10px] text-light/10">
+              © 2026 · ALL RIGHTS RESERVED
+            </p>
+          </div>
+
         </div>
-        <p className="mono text-xs text-light/20">
-          © 2026 · Built with React + Tailwind + Framer Motion
-        </p>
-        <p className="mono text-xs text-accent/40 tracking-widest uppercase">
-          Photographer & MEDIA Creative
-        </p>
+        
+        <div className="mt-20 flex justify-center">
+          <div className="w-1 h-1 rounded-full bg-accent/20" />
+        </div>
       </div>
     </footer>
   )
 }
+

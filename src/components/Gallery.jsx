@@ -27,10 +27,10 @@ export default function Gallery() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <p className="mono text-xs text-accent tracking-[0.3em] uppercase mb-4">✦ Karya Saya</p>
+        <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-4">//Gallery</p>
         <h2 className="font-cormorant font-light text-5xl md:text-7xl text-light leading-none">
-          kass<br />
-          <span className="italic text-accent">Works.</span>
+          Photo<br />
+          <span className="italic text-accent">Documents.</span>
         </h2>
       </motion.div>
 
@@ -55,7 +55,7 @@ export default function Gallery() {
             <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/40 transition-colors duration-500 flex items-end p-4">
               <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 flex items-center gap-2">
                 <ZoomIn size={14} className="text-accent" />
-                <span className="mono text-xs text-accent tracking-widest uppercase">{photo.tag}</span>
+                <span className="font-mono text-xs text-accent tracking-widest uppercase">{photo.tag}</span>
               </div>
             </div>
           </motion.div>

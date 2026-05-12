@@ -28,7 +28,7 @@ export default function ToolsTicker() {
         <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-dark to-transparent z-20 pointer-events-none" />
         
         <div className="mb-20 px-6 md:px-16 text-center">
-          <p className="mono text-[10px] text-accent/50 tracking-[0.6em] uppercase font-medium">✦ Essential Creative Stack</p>
+          <p className="font-mono text-[10px] text-accent/50 tracking-[0.6em] uppercase font-medium">✦ Essential Creative Stack</p>
         </div>
 
         <div className="flex relative overflow-hidden">
@@ -57,7 +57,7 @@ export default function ToolsTicker() {
                     e.target.src = 'https://cdn.simpleicons.org/adobe/c9a96e';
                   }}
                 />
-                <span className="mono text-[11px] md:text-[13px] text-light font-light tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap uppercase">
+                <span className="font-mono text-[11px] md:text-[13px] text-light font-light tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap uppercase">
                   {tool.name}
                 </span>
               </div>

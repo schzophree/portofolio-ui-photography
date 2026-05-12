@@ -18,8 +18,8 @@ export default function About() {
             className="relative z-10 w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700"
             style={{ marginTop: '1px' }}
           />
-          <div className="absolute bottom-4 right-4 z-20 bg-dark/80 backdrop-blur-sm border border-white/10 px-4 py-3">
-            <p className="mono text-xs text-accent tracking-widest">Owner - Cinegraph.id</p>
+          <div className="absolute bottom-4 right-4 z-20 bg-dark/80 backdrop-blur-sm border px-4 py-3" style={{ borderColor: 'rgb(201, 169, 110)' }}>
+            <p className="font-mono text-xs tracking-widest" style={{ color: 'rgba(219, 219, 219, 1)' }}>Owner - Cinegraph.id</p>
             <p className="font-cormorant text-lg text-light italic mt-0.5">Photographer & Videographer</p>
           </div>
         </motion.div>
@@ -32,7 +32,7 @@ export default function About() {
           transition={{ duration: 0.9, delay: 0.15 }}
           className="max-w-xl"
         >
-          <p className="mono text-[14px] text-accent tracking-[0.4em] uppercase mb-8 opacity-80" style={{ paddingTop: '0px', paddingBottom: '0px', marginTop: '0px', marginBottom: '0px' }}>//About Me</p>
+          <p className="font-mono text-[14px] text-accent tracking-[0.4em] uppercase mb-8 opacity-80" style={{ paddingTop: '0px', paddingBottom: '0px', marginTop: '0px', marginBottom: '0px' }}>//About Me</p>
 
           <h2 className="font-cormorant font-light text-5xl md:text-7xl text-light leading-[1.1] mb-10">
             Biografi<br />
@@ -46,7 +46,7 @@ export default function About() {
             </p>
 
             <p>
-              Dengan berbagai pengalaman, fokus utama saya sekarang ada di balik lensa <span className="text-accent/80 font-medium">(penguasaan penuh kamera APSC/FF)</span> dan manipulasi digital tingkat lanjut menggunakan <span className="text-accent/80 font-medium">Adobe Photoshop dan Adobe Lightroom.</span>
+              Dengan berbagai pengalaman, fokus utama saya sekarang ada di balik lensa <span className="font-medium" style={{ color: '#8e8c88' }}>(penguasaan penuh kamera APSC/FF)</span> dan manipulasi digital tingkat lanjut menggunakan <span className="font-medium" style={{ color: '#8f8d89' }}>Adobe Photoshop dan Adobe Lightroom.</span>
             </p>
 
             <p>
@@ -58,13 +58,13 @@ export default function About() {
 
           <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
             {[
-              { num: '3+', label: 'Tahun Pengalaman' },
+              { num: '5+', label: 'Tahun Pengalaman' },
               { num: '∞', label: 'Frame Diabadikan' },
               { num: '3', label: 'Komunitas Aktif' },
             ].map((stat, i) => (
               <div key={i}>
-                <p className="font-cormorant text-4xl text-accent font-light">{stat.num}</p>
-                <p className="mono text-xs text-light/30 tracking-wider mt-1 uppercase">{stat.label}</p>
+                <p className="mono text-accent font-light" style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: '25px' }}>{stat.num}</p>
+                <p className="font-mono text-xs text-light/30 tracking-wider mt-1 uppercase">{stat.label}</p>
               </div>
             ))}
           </div>
